@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'trackmed/styles/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="welcome">
+    <h1>{{ user.lastname }} {{ user.firstname }} {{ user.surname }}</h1>
+</div>
+{% endblock %}
