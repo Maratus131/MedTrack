@@ -1,0 +1,2039 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+    width: 100%;
+    background-color: aliceblue;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    width: 1440px;
+    background-color: white;
+    align-items: center;
+    margin: auto;
+    border-bottom: 1px solid grey;
+    height: 95px;
+}
+
+
+.headerMenu {
+    display: none;
+}
+
+.headerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.headerLogo {
+    font-size: 32px;
+    font-weight: 505;
+}
+
+.headerLogo a {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    font-size: 20px;
+    gap: 15px;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    width: 1440px;
+    margin: auto;
+    background-color: white;
+}
+
+/* Slider */
+
+.carousel {
+    width: 1440px;
+    overflow: hidden;
+    margin-bottom: 8%;
+}
+
+.carouselSlider {
+    width: 400%;
+    position: relative;
+    display: flex;
+    padding-bottom: 14px;
+}
+
+.slide {
+    width: 25%;
+    transition: all 0.6s ease;
+}
+
+.banner {
+    width: 1440px;
+    z-index: 5;
+}
+
+.s1 .carouselText {
+    position: absolute;
+    top: 10%;
+    left: 3.5%;
+    font-size: 40px;
+    font-weight: bold;
+    width: 35%;
+    text-shadow: 0px 5px 50px #ffffff;
+}
+
+.s1,
+.s2,
+.s3,
+.s4 {
+    position: relative;
+}
+
+.s2 .carouselText {
+    position: absolute;
+    top: 5%;
+    left: 3.5%;
+    font-size: 40px;
+    font-weight: bold;
+    width: 35%;
+    text-shadow: 0px 5px 50px #ffffff;
+
+}
+
+.s3 .carouselText {
+    position: absolute;
+    top: 5%;
+    left: 3.5%;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+    text-shadow: 0px 5px 50px #ffffff;
+}
+
+.s4 .carouselText {
+    position: absolute;
+    top: 4%;
+    right: 2.5%;
+    font-size: 40px;
+    font-weight: bold;
+    width: 35%;
+    text-shadow: 0px 5px 50px #ffffff;
+}
+
+.leftSlider {
+    width: 39px;
+    height: 41px;
+    position: absolute;
+    top: 50%;
+    left: 0%
+}
+
+.rightSlider {
+    position: absolute;
+    right: 75%;
+    top: 50%;
+}
+
+
+.leftSlider,
+.rightSlider {
+    display: none;
+    cursor: pointer;
+}
+
+#slide1:checked~.leftSlider[for="slide4"],
+#slide1:checked~.rightSlider[for="slide2"] {
+    display: block;
+}
+
+#slide2:checked~.leftSlider[for="slide1"],
+#slide2:checked~.rightSlider[for="slide3"] {
+    display: block;
+}
+
+#slide3:checked~.leftSlider[for="slide2"],
+#slide3:checked~.rightSlider[for="slide4"] {
+    display: block;
+}
+
+#slide4:checked~.leftSlider[for="slide3"],
+#slide4:checked~.rightSlider[for="slide1"] {
+    display: block;
+}
+
+.carouselDots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    background-color: #000;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.dot:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[name="carousel"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+#slide1:checked~.s1 {
+    margin-left: 0;
+}
+
+#slide2:checked~.s1 {
+    margin-left: -25%;
+}
+
+#slide3:checked~.s1 {
+    margin-left: -50%;
+}
+
+#slide4:checked~.s1 {
+    margin-left: -75%;
+}
+
+
+.intro {
+    width: 1440px;
+}
+
+
+.welcome h1 {
+    font-size: 40px;
+    font-weight: bold;
+    width: 46.5%;
+    margin: 0 auto;
+    padding-bottom: 4%;
+}
+
+.welcome p {
+    font-size: 24px;
+    width: 46.5%;
+    margin: 0 auto;
+    padding-bottom: 3%;
+}
+
+.connectButton {
+    width: 229.53px;
+    height: 47px;
+    border-radius: 10px;
+    background-color: #FACC15;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 10%;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    position: relative;
+    left: 26.7%;
+}
+
+
+.connectButton:hover {
+    transform: scale(1.005);
+}
+
+
+/* Our services */
+.services {
+    background-color: #083344;
+}
+
+.services h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    padding: 0 12%;
+    justify-content: space-between;
+    padding-bottom: 97px;
+}
+
+.cards img {
+    width: max-content;
+    padding-bottom: 22px;
+}
+
+.cards h3 {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 263px;
+    padding-bottom: 22px;
+}
+
+.cards p {
+    font-size: 15px;
+    font-weight: 100;
+    color: #FFFFFF;
+    width: 252px;
+}
+
+.connectWithUs {
+    padding-top: 3%;
+
+}
+
+.connectWithUs h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 49px;
+    padding-bottom: 39px;
+}
+
+.inputForm input,
+.inputForm textarea {
+    font-family: 'Montserrat';
+    background-color: #DFD6D6;
+    width: 517px;
+    padding-left: 24px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.inputForm input {
+    height: 59px;
+}
+
+.inputForm textarea {
+    height: 106px;
+    resize: none;
+    padding-top: 10px;
+}
+
+
+.sendButton {
+    width: 140.83px;
+    height: 33.3px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #FACC15;
+    border: none;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    margin-bottom: 4%;
+}
+
+.connectWithUs {
+    text-align: center;
+}
+
+.sendButton:hover {
+    transform: scale(1.005);
+}
+
+footer {
+    background-color: #083344;
+    width: 1440px;
+    height: auto;
+    margin: auto;
+    padding-left: 0.5%;
+    padding-bottom: 2%;
+    position: relative;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerMenu {
+    padding-top: 2.5%;
+    line-height: normal;
+    padding-left: 3.056%;
+    display: flex;
+    gap: 13.5px;
+    padding-bottom: 4%;
+}
+
+.footerMenu a {
+    color: white;
+    text-decoration: none;
+}
+
+.socialNetworks {
+    display: flex;
+    padding-top: 2.5%;
+    padding-right: 3.056%;
+    padding-bottom: 4%;
+    gap: 28px;
+}
+
+.logo {
+    padding-left: 3.056%;
+    font-size: 32px;
+    color: #FFFFFF;
+    font-weight: 510;
+    padding-bottom: 47px;
+}
+
+.copyright {
+    display: inline-block;
+    padding-left: 3.056%;
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 80%;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.subscribe {
+    position: absolute;
+    width: max-content;
+    height: 42px;
+    border-radius: 10px;
+    background-color: #FACC15;
+    border: none;
+    font-size: 16px;
+    top: 117px;
+    bottom: 55px;
+    right: 3.056%;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.subscribe:hover {
+    transform: scale(1.005);
+}
+
+@media (1115px<=width<=1439px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    /* Slider */
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 14px;
+    }
+
+    .slide {
+        width: 25%;
+        transition: all 0.6s ease;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 35px;
+    }
+
+    .s1,
+    .s2,
+    .s3,
+    .s4 {
+        position: relative;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 35px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 35px;
+        width: 60%;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 35px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+    .leftSlider {
+        width: 39px;
+        height: 41px;
+        position: absolute;
+        top: 50%;
+        left: 0%
+    }
+
+    .rightSlider {
+        position: absolute;
+        right: 75%;
+        top: 50%;
+    }
+
+
+    .leftSlider,
+    .rightSlider {
+        display: none;
+        cursor: pointer;
+    }
+
+    .intro {
+        width: auto;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+        font-size: 34px;
+    }
+
+    .welcome p {
+        font-size: 32px;
+    }
+
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 34px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 9%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+    }
+
+    .cards img {
+        padding-bottom: 22px;
+    }
+
+    .cards h3 {
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: bold;
+        width: 263px;
+        padding-bottom: 22px;
+    }
+
+    .cards p {
+        font-size: 15px;
+        font-weight: 100;
+        color: #FFFFFF;
+        width: 252px;
+    }
+
+    /* Contacts */
+
+    .connectWithUs {
+        padding-top: 3%;
+    }
+
+    .connectWithUs h1 {
+        font-size: 34px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 49px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 517px;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+}
+
+@media (960px<=width<=1114px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 14px;
+    }
+
+    .slide {
+        width: 25%;
+        transition: all 0.6s ease;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 30px;
+    }
+
+    .s1,
+    .s2,
+    .s3,
+    .s4 {
+        position: relative;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 30px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 30px;
+        width: 60%;
+        font-size: 30px;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 30px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+    .leftSlider {
+        width: 39px;
+        height: 41px;
+        position: absolute;
+        top: 50%;
+        left: 0%
+    }
+
+    .rightSlider {
+        position: absolute;
+        right: 75%;
+        top: 50%;
+    }
+
+    .rightSlider img,
+    .leftSlider img {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .leftSlider,
+    .rightSlider {
+        display: none;
+        cursor: pointer;
+    }
+
+    .intro {
+        width: auto;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    .welcome p {
+        font-size: 29px;
+    }
+
+    .connectButton {
+        font-size: 17px;
+        width: auto;
+        height: 40px;
+    }
+
+
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 32px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 6%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+    }
+
+    .cards img {
+        padding-bottom: 22px;
+    }
+
+    .cards h3 {
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: bold;
+        width: 263px;
+        padding-bottom: 22px;
+    }
+
+    .cards p {
+        font-size: 15px;
+        font-weight: 100;
+        color: #FFFFFF;
+        width: 252px;
+    }
+
+
+    .connectWithUs h1 {
+        font-size: 32px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 517px;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+}
+
+@media (850px<width<=959px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 14px;
+    }
+
+    .slide {
+        width: 25%;
+        transition: all 0.6s ease;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 27px;
+        width: 40%;
+    }
+
+    .s1,
+    .s2,
+    .s3,
+    .s4 {
+        position: relative;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 27px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 30px;
+        width: 60%;
+        font-size: 27px;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 27px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+    .leftSlider {
+        width: 39px;
+        height: 41px;
+        position: absolute;
+        top: 50%;
+        left: 0%
+    }
+
+    .rightSlider {
+        position: absolute;
+        right: 75%;
+        top: 50%;
+    }
+
+    .rightSlider img,
+    .leftSlider img {
+        width: 33px;
+        height: 33px;
+    }
+
+    .leftSlider,
+    .rightSlider {
+        display: none;
+        cursor: pointer;
+    }
+
+    .intro {
+        width: auto;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+        font-size: 29px;
+    }
+
+    .welcome p {
+        font-size: 25px;
+    }
+
+    .connectButton {
+        font-size: 15px;
+        width: auto;
+        height: 35px;
+    }
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 31px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .service1,
+    .service2,
+    .service3 {
+        width: 240px;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 3%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+        width: 100%;
+    }
+
+    .cards img {
+        width: 240px;
+        height: 306.44px;
+    }
+
+    .cards p,
+    .cards h3 {
+        width: 240px;
+    }
+
+
+    .connectWithUs h1 {
+        font-size: 31px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 517px;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+}
+
+
+@media (700px<=width<=850px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    .headerMenu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    header {
+        height: 65px;
+    }
+
+    .headerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 11px;
+    }
+
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 25px;
+        width: 40%;
+    }
+
+    .s1,
+    .s2,
+    .s3,
+    .s4 {
+        position: relative;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 25px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 30px;
+        width: 60%;
+        font-size: 25px;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 25px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+
+    .rightSlider img,
+    .leftSlider img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dot {
+        width: 11px;
+        height: 11px;
+    }
+
+
+    .intro {
+        width: auto;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+    .welcome p {
+        font-size: 20px;
+    }
+
+    .connectButton {
+        font-size: 13px;
+        width: auto;
+        height: 30px;
+    }
+
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 29px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .service1,
+    .service2,
+    .service3 {
+        width: 180px;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 3%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+        width: 100%;
+    }
+
+    .cards img {
+        width: 180px;
+        height: 229.83px;
+    }
+
+    .cards p,
+    .cards h3 {
+        width: 180px;
+    }
+
+    .cards h3 {
+        font-size: 15px;
+    }
+
+    .cards h3 {
+        font-size: 14px;
+    }
+
+
+    .connectWithUs h1 {
+        font-size: 29px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 90%;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+
+
+}
+
+@media (558px<=width<700px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    .headerMenu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    header {
+        height: 65px;
+    }
+
+    .headerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 14px;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 20px;
+        width: 40%;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 20px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 30px;
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 20px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+
+    .rightSlider img,
+    .leftSlider img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    .intro {
+        width: auto;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .welcome p {
+        font-size: 18px;
+    }
+
+    .connectButton {
+        font-size: 11px;
+        width: auto;
+        height: 27px;
+    }
+
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 27px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .service1,
+    .service2,
+    .service3 {
+        width: 170px;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 3%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+        width: 100%;
+    }
+
+    .cards img {
+        width: 170px;
+        height: 217.06px;
+    }
+
+    .cards p,
+    .cards h3 {
+        width: 170px;
+    }
+
+    .cards h3 {
+        font-size: 15px;
+    }
+
+    .cards h3 {
+        font-size: 14px;
+    }
+
+
+    .connectWithUs h1 {
+        font-size: 27px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 90%;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+
+    /*Footer*/
+    .footerContent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footerMenu {
+        padding-top: 4.5%;
+        line-height: normal;
+        padding-left: 3.056%;
+        font-size: 16px;
+        display: flex;
+        gap: 13.5px;
+        padding-bottom: 4%;
+    }
+
+    .footerMenu a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .socialNetworks {
+        display: flex;
+        padding-top: 4.5%;
+        padding-right: 3.056%;
+        padding-bottom: 4%;
+        gap: 27px;
+    }
+
+    .socialNetworks a {
+        height: 24px;
+        width: 24px;
+    }
+
+    .socialNetworks img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .logo {
+        padding-left: 3.056%;
+        font-size: 32px;
+        color: #FFFFFF;
+        font-weight: 510;
+        padding-bottom: 47px;
+    }
+
+    .copyright {
+        display: inline-block;
+        padding-left: 3.056%;
+        font-size: 16px;
+        color: #FFFFFF;
+        opacity: 80%;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: end;
+    }
+
+    .subscribe {
+        position: absolute;
+        width: max-content;
+        height: 42px;
+        border-radius: 10px;
+        background-color: #FACC15;
+        border: none;
+        font-size: 16px;
+        top: 117px;
+        bottom: 55px;
+        right: 3.056%;
+        font-family: 'Montserrat';
+        cursor: pointer;
+    }
+}
+
+
+
+@media (466px<=width<=558px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    .headerLogo {
+        font-size: 28px;
+        font-weight: 505;
+    }
+
+    .headerMenu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    header {
+        height: 65px;
+    }
+
+    .headerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 10px;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 15px;
+        width: 40%;
+    }
+
+    .s1,
+    .s2,
+    .s3,
+    .s4 {
+        position: relative;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 16px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 30px;
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 16px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+
+    .rightSlider img,
+    .leftSlider img {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    .leftSlider,
+    .rightSlider {
+        display: none;
+        cursor: pointer;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .intro {
+        width: auto;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+        font-size: 20px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+    }
+
+    .connectButton {
+        font-size: 11px;
+        width: auto;
+        height: 27px;
+    }
+
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 23px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .service1,
+    .service2,
+    .service3 {
+        width: 140px;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 3%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+        width: 100%;
+    }
+
+    .cards img {
+        width: 140px;
+        height: 178.76px;
+    }
+
+    .cards p,
+    .cards h3 {
+        width: 140px;
+    }
+
+    .cards h3 {
+        font-size: 12px;
+    }
+
+    .cards p {
+        font-size: 11px;
+    }
+
+
+    .connectWithUs h1 {
+        font-size: 23px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 90%;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+
+    .sendButton {
+        width: max-content;
+        height: 24px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #FACC15;
+        border: none;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        cursor: pointer;
+        margin-bottom: 4%;
+    }
+
+    /*Footer*/
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:12px;
+    }
+
+    .footerContainer{
+        padding-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerMenu {
+        padding-top: 2%;
+        padding-bottom: 3%;
+        line-height: normal;
+        padding-left: 0;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footerMenu a {
+        color: white;
+        text-decoration: none;
+        width: max-content;
+    }
+
+    .socialNetworks {
+        display: flex;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 2%;
+        gap: 12px;
+    }
+
+    .socialNetworks a {
+        height: 24px;
+        width: 24px;
+    }
+
+    .socialNetworks img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        font-size: 16px;
+        color: #FFFFFF;
+        opacity: 80%;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: end;
+    }
+    .subscribe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: static;
+        width: max-content;
+        height: 35px;
+        border-radius: 10px;
+        background-color: #FACC15;
+        border: none;
+        font-size: 14px;
+        right: 0;
+        font-family: 'Montserrat';
+        cursor: pointer;
+    }
+}
+
+@media (0px<=width<=466px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+    }
+
+    .headerLogo {
+        font-size: 22px;
+        font-weight: 505;
+    }
+
+    .headerMenu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    header {
+        height: 65px;
+    }
+
+    .headerContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8%;
+    }
+
+    .carouselSlider {
+        width: 400%;
+        position: relative;
+        display: flex;
+        padding-bottom: 8px;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .s1 .carouselText {
+        top: 10%;
+        left: 3.5%;
+        font-size: 12px;
+        width: 40%;
+    }
+
+    .s2 .carouselText {
+        top: 5%;
+        left: 3.5%;
+        font-size: 12px;
+        width: 50%;
+    }
+
+    .s3 .carouselText {
+        font-size: 30px;
+        width: 60%;
+        font-size: 12px;
+    }
+
+    .s4 .carouselText {
+        top: 4%;
+        right: 2.5%;
+        font-size: 12px;
+        font-weight: bold;
+        width: 35%;
+    }
+
+    .rightSlider img,
+    .leftSlider img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        cursor: pointer;
+        background-color: #000;
+        opacity: 0.5;
+        border-radius: 10px;
+        transition: all 0.4s ease;
+    }
+
+    /* Welcome */
+    .intro {
+        width: auto;
+    }
+
+    .welcome h1 {
+        font-size: 18px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .connectButton {
+        font-size: 9px;
+        width: auto;
+        height: 25px;
+    }
+
+
+    /* Our services */
+    .servicesContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .services h1 {
+        font-size: 17px;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .service1,
+    .service2,
+    .service3 {
+        width: 93px;
+    }
+
+    .cards {
+        display: flex;
+        padding: 0 3%;
+        justify-content: space-between;
+        padding-bottom: 97px;
+        width: 100%;
+    }
+
+    .cards img {
+        width: 93px;
+        height: 121.45px;
+    }
+
+    .cards p,
+    .cards h3 {
+        width: 93px;
+    }
+
+    .cards h3 {
+        font-size: 11px;
+    }
+
+    .cards p {
+        font-size: 10px;
+    }
+
+
+    .connectWithUs h1 {
+        font-size: 17px;
+    }
+
+    .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 2%;
+    }
+
+    .inputForm input,
+    .inputForm textarea {
+        font-size: 11px;
+        font-family: 'Montserrat';
+        background-color: #DFD6D6;
+        width: 90%;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid black;
+    }
+
+    .inputForm input {
+        height: 59px;
+    }
+
+    .inputForm textarea {
+        height: 106px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+    .sendButton {
+        width: max-content;
+        height: 24px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #FACC15;
+        border: none;
+        font-size: 14px;
+        font-family: 'Montserrat';
+        cursor: pointer;
+        margin-bottom: 4%;
+    }
+    /*Footer*/
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:12px;
+    }
+
+    .footerContainer{
+        padding-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerMenu {
+        padding-top: 2%;
+        padding-bottom: 3%;
+        line-height: normal;
+        padding-left: 0;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footerMenu a {
+        color: white;
+        text-decoration: none;
+        width: max-content;
+    }
+
+    .socialNetworks {
+        display: flex;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 2%;
+        gap: 12px;
+    }
+
+    .socialNetworks a {
+        height: 24px;
+        width: 24px;
+    }
+
+    .socialNetworks img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        font-size: 16px;
+        color: #FFFFFF;
+        opacity: 80%;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: end;
+    }
+    .subscribe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: static;
+        width: max-content;
+        height: 35px;
+        border-radius: 10px;
+        background-color: #FACC15;
+        border: none;
+        font-size: 14px;
+        right: 0;
+        font-family: 'Montserrat';
+        cursor: pointer;
+    }
+}

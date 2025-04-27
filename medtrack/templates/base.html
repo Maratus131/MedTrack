@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'trackmed/styles/reset.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="headerLogo"><a href="{% url 'home' %}">МедТрек</a></div>
+
+            <nav class="navigation">
+                {% for m in menu %}
+                <a href="{% url m.url_name %}">{{ m.title }}</a>
+                {% endfor %}
+                <a href="#">Войти</a>
+            </nav>
+
+            <img class="headerMenu" style="width: 26px" src="{% static 'trackmed/images/burgerMenu.svg' %}">
+        </div>
+    </header>
+    {% block content %} {% endblock %}
+    <footer>
+        <div class="footerContainer">
+            <div class="footerContent">
+                <div class="footerMenu">
+                  {% for m in menu %}
+                  <a href="{% url m.url_name %}">{{ m.title }}</a>
+                  {% endfor %}
+                </div>
+                <div class="socialNetworks">
+                    <a href="#"><img src="{% static 'trackmed/images/tg.png' %}"></a>
+                    <a href="#"><img src="{% static 'trackmed/images/vk.png' %}"></a>
+                    <a href="#"><img src="{% static 'trackmed/images/yout.png' %}"></a>
+                </div>
+            </div>
+            <div class="logo">
+                МедТрек
+            </div>
+            <div class="buttonContainer">
+                <button class="subscribe">Подписка на рассылку</button>
+            </div>
+            <div class="copyright">
+                © Усачёв Марат 4321-21
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

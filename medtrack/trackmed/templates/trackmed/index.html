@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'trackmed/styles/styles.css' %}">
+{% endblock %}
+{% block content %}
+    <main>
+        <div class="carousel">
+            <div class="carouselSlider">
+                <input type="radio" id="slide1" name="carousel" checked>
+                <input type="radio" id="slide2" name="carousel">
+                <input type="radio" id="slide3" name="carousel">
+                <input type="radio" id="slide4" name="carousel">
+
+                <div class="slide s1">
+                    <img class="banner" src="{% static 'trackmed/images/card1.png' %}">
+                    <div class="carouselText">Уменьшаем затраты на обслуживание медицинского оборудования</div>
+                </div>
+                <div class="slide s2">
+                    <img class="banner" src="{% static 'trackmed/images/card2.png' %}">
+                    <div class="carouselText">Собираем статистику по ремонтам, расчитываем множество ключевых
+                        показателей эффективности</div>
+                </div>
+                <div class="slide s3">
+                    <img class="banner" src="{% static 'trackmed/images/card3.png' %}">
+                    <div class="carouselText">Интеграция с поставщиками медицинского оборудования</div>
+                </div>
+                <div class="slide s4">
+                    <img class="banner" src="{% static 'trackmed/images/card4.png' %}">
+                    <div class="carouselText">Управляйте учетными записями сотрудников</div>
+                </div>
+
+                <label for="slide4" class="leftSlider"><img src="{% static 'trackmed/images/Left Slider.png' %}" alt="Left Slider"></label>
+                <label for="slide1" class="leftSlider"><img src="{% static 'trackmed/images/Left Slider.png' %}" alt="Left Slider"></label>
+                <label for="slide2" class="leftSlider"><img src="{% static 'trackmed/images/Left Slider.png' %}" alt="Left Slider"></label>
+                <label for="slide3" class="leftSlider"><img src="{% static 'trackmed/images/Left Slider.png' %}" alt="Left Slider"></label>
+
+
+                <label for="slide2" class="rightSlider"><img src="{% static 'trackmed/images/Right Slider.png' %}" alt="Right Slider"></label>
+                <label for="slide3" class="rightSlider"><img src="{% static 'trackmed/images/Right Slider.png' %}" alt="Right Slider"></label>
+                <label for="slide4" class="rightSlider"><img src="{% static 'trackmed/images/Right Slider.png' %}" alt="Right Slider"></label>
+                <label for="slide1" class="rightSlider"><img src="{% static 'trackmed/images/Right Slider.png' %}" alt="Right Slider"></label>
+
+            </div>
+            <div class="carouselDots">
+                <label for="slide1" class="dot"></label>
+                <label for="slide2" class="dot"></label>
+                <label for="slide3" class="dot"></label>
+                <label for="slide4" class="dot"></label>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="welcome">
+                <h1>
+                    Система для управления медицинским оборудованием
+                </h1>
+                <p>
+                    Добро пожаловать в МедТрек,
+                    где мы модернизируем способ управления медицинским оборудованием в медицинских учреждениях.
+                    Наша система упрощает учет и заказ медицинских принадлежностей, обеспечивая эффективность и
+                    точность.
+                    Присоединяйтесь к нам в преобразовании логистики здравоохранения для лучшего будущего.
+                </p>
+                <a href="#connectWithUs">
+                    <button class="connectButton">
+                        Связаться с нами
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="servicesContainer">
+            <div class="services">
+                <h1>
+                    Наши возможности
+                </h1>
+                <div class="cards">
+                    <div class="service1">
+                        <img src="{% static 'trackmed/images/serv1.png' %}">
+                        <h3>
+                            Автоматизация процессов
+                            заказа медицинского оборудования
+                        </h3>
+                        <p>
+                            Мы предлагаем услуги,
+                            которые позволяют повысить точность и скорость оформления заказов.
+                        </p>
+                    </div>
+                    <div class="service2">
+                        <img src="{% static 'trackmed/images/serv2.png' %}">
+                        <h3>
+                            Ведение учета запасов медицинского оборудования
+                        </h3>
+                        <p>
+                            Наш сервис предоставляет централизованное хранилище данных
+                            о наличии и состоянии оборудования. Уведомляет о критически низком
+                            уровне запасов и необходимости обновления оборудования
+                        </p>
+                    </div>
+                    <div class="service3">
+                        <img src="{% static 'trackmed/images/serv3.png' %}">
+                        <h3>
+                            Аналитика и отчетность о состоянии имеющегося оборудования
+                        </h3>
+                        <p>
+                            Создание отчетов о состоянии имеющегося
+                            медицинского оборудования
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="connectWithUs" class="connectWithUs">
+            <h1>Связаться с нами</h1>
+            <form class="inputForm">
+                <input type="email" placeholder="Email-адрес (обязательно)" required>
+                <input type="text" placeholder="Имя (обязательно)" required>
+                <input type="text" placeholder="Номер телефона">
+                <textarea placeholder="Сообщение (обязательно)"></textarea>
+            </form>
+            <button class="sendButton">
+                Отправить
+            </button>
+        </div> 
+    </main>
+{% endblock %}
